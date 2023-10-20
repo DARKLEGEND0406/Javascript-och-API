@@ -1,0 +1,152 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background: linear-gradient(to right, #a9d6e5, #89c2d9, #61a5c2, #2e8bc0);
+}
+
+#top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #333; 
+    color: white; 
+    padding: 10px;
+}
+
+#top a {
+    text-decoration: none;
+    color: white; 
+}
+
+#top div {
+    font-size: 36px; 
+    color: #FFD700; 
+    text-shadow: 3px 3px 3px #000;
+    background-color: #000080; 
+    border: 5px double #FFD700;
+    border-radius: 25px;
+    padding: 10px;
+}
+
+#top div:hover {
+    transform: scale(1.1);
+}
+
+#clock {
+    font-size: 36px;
+    color: white;
+    text-align: center;
+    margin-top: 20px;            
+}
+
+
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+
+    text-align: center;
+
+    display: flex;
+
+    justify-content: center;
+
+    margin-top: 3%;
+}
+    
+#sl-info { grid-area: 1 / 1 / 2 / 2; }
+#Väderinformation { grid-area: 1 / 2 / 2 / 3; }
+#Bokinformation { grid-area: 1 / 3 / 2 / 4; }
+
+
+#sl-info{
+    width: 40%;
+    height: 70vh;
+    
+     box-shadow: -5px -5px -10px dimgray;
+
+     background-color:#012a4a;
+     border-radius : 15px;
+     color: wheat;
+
+    text-align: center;
+}
+
+#sl-info p{
+    margin-left: 5%;
+}  
+    
+#Väderinformation{
+    width: 40%;
+    height: 70vh;
+    
+     box-shadow: -5px -5px -10px dimgray;
+
+     background-color:#013a63;
+     border-radius : 15px;
+     color: wheat;
+
+    overflow:auto;
+}
+    
+#Väderinformation p{
+
+    
+    font-size: larger;
+    
+    width: fit-content;
+    
+    margin: 2.4%;
+    margin-left: 45%;
+    
+    border-radius: 5px;
+    border: solid 2px;
+}
+
+
+#clock {
+
+    display: flex;
+    justify-content: flex-start;
+
+    font-size: 50px;
+    color: #FFD700; 
+    text-shadow: 3px 3px 3px #000;
+    background-color: #000080; 
+    border: 5px double #FFD700;
+    border-radius: 25px;
+    width: fit-content; 
+
+     animation-name: grow;
+     animation-duration: 0.5s;
+}
+
+#Bokinformation{
+    width: 40%;
+    height: 70vh;
+    
+     box-shadow: -5px -5px -10px dimgray;
+
+     background-color:#01497c;
+     border-radius : 15px;
+     color: wheat;
+
+    overflow:auto;
+
+
+}
+
+@keyframes grow {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
